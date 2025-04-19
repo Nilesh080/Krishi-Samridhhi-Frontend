@@ -206,42 +206,38 @@ const Analysis = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 p-12">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-        Analysis Results
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 px-6 md:px-12">
+      <h1 className="text-4xl font-bold text-green-700 mb-10 text-center font-poppins tracking-wide drop-shadow-md">
+        🌿 Analysis Dashboard
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
-        <div className="flex-1 p-6 bg-white rounded-lg shadow-lg">
-          <h2 className="text-lg font-semibold text-center text-gray-800 mb-4">
+      {/* Chart Cards */}
+      <div className="grid md:grid-cols-2 gap-10">
+        <div className="p-6 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,128,0,0.1)] hover:shadow-[0_30px_65px_rgba(0,128,0,0.2)] transition-all duration-500">
+          <h2 className="text-xl font-semibold text-center text-gray-800 mb-4">
             Nutrient Distribution
           </h2>
-          <div
-            className="flex justify-center items-center w-full"
-            style={{ height: "400px" }}
-          >
+          <div className="flex justify-center items-center w-full" style={{ height: "400px" }}>
             <Bar data={barData} options={barOptions} />
           </div>
         </div>
 
-        <div className="flex-1 p-6 bg-white rounded-lg shadow-lg">
-          <h2 className="text-lg font-semibold text-center text-gray-800 mb-4">
+        <div className="p-6 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,128,0.1)] hover:shadow-[0_30px_65px_rgba(0,0,128,0.2)] transition-all duration-500">
+          <h2 className="text-xl font-semibold text-center text-gray-800 mb-4">
             Crop Factor Analysis
           </h2>
-          <div
-            className="flex justify-center items-center w-full"
-            style={{ height: "400px" }}
-          >
+          <div className="flex justify-center items-center w-full" style={{ height: "400px" }}>
             <Radar data={radarData} options={radarOptions} />
           </div>
         </div>
       </div>
 
-      <div className="mt-8 p-6 bg-white rounded-lg shadow-lg">
-        <h2 className="text-lg font-semibold text-center text-gray-800 mb-4">
-          Temperature, Humidity, and Soil Moisture
+      {/* Gauges Section */}
+      <div className="mt-12 p-6 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_65px_rgba(0,0,0,0.15)] transition-all duration-500">
+        <h2 className="text-xl font-semibold text-center text-gray-800 mb-6">
+          🌡️ Live Sensor Data (Gauge View)
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {renderGauge(sensorData.temperature, "#4caf50", "Temperature")}
           {renderGauge(sensorData.humidity, "#2196f3", "Humidity")}
           {renderGauge(sensorData.soilMoisture, "#ff9800", "Soil Moisture")}
