@@ -1,6 +1,7 @@
 import { useState } from "react";
 import YoloV8 from "./YoloV8.js";
 import YoloV9 from "./YoloV9.js";
+import CNN_Model from "./CNN_Model";
 import Deceptron from "./Deceptron.js";
 
 const Test = () => {
@@ -10,6 +11,8 @@ const Test = () => {
     switch (selectedModel) {
       case "yolov9":
         return <YoloV9 />;
+      case "CNN-Model":
+        return <CNN_Model />;
       case "deceptron":
         return <Deceptron />;
       case "yolov8":
@@ -36,6 +39,7 @@ const Test = () => {
           >
             <option value="yolov8">YOLOv8</option>
             <option value="yolov9">YOLOv9</option>
+            <option value="CNN-Model">CNN Model</option>
             <option value="deceptron">Deceptron</option>
           </select>
         </div>

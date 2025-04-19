@@ -36,7 +36,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-12 text-lg font-semibold text-gray-800">
-          {["soilmoisture", "crop-recommendation", "analysis", "ricediseasepredictor"].map((item, index) => (
+          {["Soil Moisture", "Crop Recommendation", "Analysis", "Rice Disease Predictor"].map((item, index) => (
             <Link
               key={index}
               to={`/${item}`}
@@ -45,7 +45,7 @@ const Navbar = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
                 {item.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
               </span>
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
         </div>
