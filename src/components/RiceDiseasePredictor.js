@@ -22,7 +22,14 @@ const Test = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center">
+    <div>
+      <header className="bg-green-700 text-white p-6 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mb-2">Agricultural Intelligence System</h1>
+          <p className="text-lg">Helping farmers make data-driven decisions</p>
+        </div>
+      </header>
+      <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center">
       <div
         className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 transform transition-transform duration-300 hover:scale-[1.02]"
       >
@@ -40,7 +47,7 @@ const Test = () => {
             <option value="yolov8">YOLOv8</option>
             <option value="yolov9">YOLOv9</option>
             <option value="CNN-Model">CNN Model</option>
-            <option value="deceptron">Deceptron</option>
+            <option value="deceptron">Detectron2</option>
           </select>
         </div>
 
@@ -50,6 +57,8 @@ const Test = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

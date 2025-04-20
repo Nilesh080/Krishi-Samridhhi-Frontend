@@ -1,6 +1,13 @@
 const CropRecommendation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white px-4 py-12 flex flex-col items-center">
+    <div>
+      <header className="bg-green-700 text-white p-6 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mb-2">Agricultural Intelligence System</h1>
+          <p className="text-lg">Helping farmers make data-driven decisions</p>
+        </div>
+      </header>
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white px-4 py-12 flex flex-col items-center">
       <h2 className="text-3xl font-bold text-green-700 mb-8 text-center font-poppins">
         🌾 Crop Recommendation System
       </h2>
@@ -13,6 +20,7 @@ const CropRecommendation = () => {
           allowFullScreen
         ></iframe>
       </div>
+    </div>
     </div>
   );
 };

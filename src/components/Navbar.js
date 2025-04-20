@@ -36,32 +36,74 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-12 text-lg font-semibold text-gray-800">
-          {["Soil Moisture", "Crop Recommendation", "Analysis", "Rice Disease Predictor"].map((item, index) => (
-            <Link
-              key={index}
-              to={`/${item}`}
-              className="relative group transition-all duration-300"
-            >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
-                {item.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
-              </span>
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          ))}
+
+          <Link
+            to="/SoilMoisture"
+            className="relative group transition-all duration-300"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
+              Soil Moisture
+            </span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+
+          <Link
+            to="/CropRecommendation"
+            className="relative group transition-all duration-300"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
+              Crop Recommendation
+            </span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+
+          <Link
+            to="/Analysis"
+            className="relative group transition-all duration-300"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
+              Analysis
+            </span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+
+          <Link
+            to="/RiceDiseasePredictor"
+            className="relative group transition-all duration-300"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
+              Rice Disease Predictor
+            </span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          <Link
+            to="/About"
+            className="relative group transition-all duration-300"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600">
+              About
+            </span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
         </div>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden bg-white px-6 py-4 space-y-3">
-          {["soilmoisture", "crop-recommendation", "analysis", "ricediseasepredictor"].map((item, index) => (
+          {[
+            "soilmoisture",
+            "crop-recommendation",
+            "analysis",
+            "ricediseasepredictor",
+          ].map((item, index) => (
             <Link
               key={index}
               to={`/${item}`}
               onClick={toggleMenu}
               className="block text-lg font-semibold text-green-800 hover:text-lime-700 transition-all duration-300"
             >
-              {item.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+              {item.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
             </Link>
           ))}
         </div>

@@ -1,0 +1,60 @@
+Actor
+
+{
+  "name": "Nilesh",
+  "dob": "2021-04-19",
+  "gender": 0,
+  "bio": "I am Actor"
+}
+
+Producer
+
+{
+  "name": "Varun",
+  "dob": "2021-04-19",
+  "gender": 0,
+  "bio": "I am Actor"
+}
+
+Genre
+
+{
+  "name": "Action"
+}
+
+Movies
+
+{
+  "name": "Salaar",
+  "yearOfRelease": 1991,
+  "plot": "string",
+  "producerId": 1,
+  "coverImage": "string",
+  "actorIds": [
+    1
+  ],
+  "genreIds": [
+    1
+  ]
+}
+
+{
+  "name": "Dhoom",
+  "yearOfRelease": 1991,
+  "plot": "string",
+  "producerId": 1,
+  "coverImage": "string",
+  "actorIds": [
+    1
+  ],
+  "genreIds": [
+    1
+  ]
+}
+
+
+Reviews
+
+{
+    "message" : "salaar 1"
+}

@@ -19,7 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const SoilMoistureForm = () => {
+const SoilMoisture = () => {
   const [soilMoisture, setSoilMoisture] = useState(0);
   const [temperature, setTemperature] = useState('');
   const [humidity, setHumidity] = useState('');
@@ -45,10 +45,17 @@ const SoilMoistureForm = () => {
     fetchData();
   }, []);
 
-  const soilMoisturePercentage = (soilMoisture / 60) * 100;
+  const soilMoisturePercentage = soilMoisture;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4 py-10">
+    <div>
+      <header className="bg-green-700 text-white p-6 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mb-2">Agricultural Intelligence System</h1>
+          <p className="text-lg">Helping farmers make data-driven decisions</p>
+        </div>
+      </header>
+      <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8 space-y-8">
         <h2 className="text-3xl font-bold text-center text-green-700 font-poppins">
           🌱 Soil Moisture Monitor
@@ -119,7 +126,8 @@ const SoilMoistureForm = () => {
         </form>
       </div>
     </div>
+    </div>
   );
 };
 
-export default SoilMoistureForm;
+export default SoilMoisture;

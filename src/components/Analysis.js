@@ -206,7 +206,14 @@ const Analysis = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 px-6 md:px-12">
+    <div>
+    <header className="bg-green-700 text-white p-6 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold mb-2">Agricultural Intelligence System</h1>
+          <p className="text-lg">Helping farmers make data-driven decisions</p>
+        </div>
+      </header>
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 px-6 md:px-12">
       <h1 className="text-4xl font-bold text-green-700 mb-10 text-center font-poppins tracking-wide drop-shadow-md">
         🌿 Analysis Dashboard
       </h1>
@@ -244,6 +251,8 @@ const Analysis = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

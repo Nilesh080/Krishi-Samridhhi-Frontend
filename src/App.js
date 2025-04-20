@@ -6,10 +6,11 @@ import ContactPage from "./components/ContactPage.js";
 import CropRecommendation from "./components/CropRecommendation.js";
 import DiagnoseNow from "./components/DiagnoseNow.js";
 import Homepage from "./components/Homepage.js";
-import Soilmoisture from "./components/Soilmoisture.js";
-import Test from "./components/Test.js";
+import SoilMoisture from "./components/Soilmoisture.js";
+import Test from "./components/About.js";
 import RiceDiseasePredictor from "./components/RiceDiseasePredictor.js";
 import Analysis from "./components/Analysis.js";
+import AboutPage from "./components/About.js";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -22,16 +23,12 @@ function App() {
           element : <Homepage />
         },
         {
-          path : "/test",
-          element : <Test />
-        },
-        {
           path : "/croprecommendation",
           element : <CropRecommendation/>
         },
         {
-          path : "/soilmoisture",
-          element : <Soilmoisture />
+          path : "/SoilMoisture",
+          element : <SoilMoisture />
         },
         {
           path : "/analysis",
@@ -44,6 +41,10 @@ function App() {
         {
           path : "/ricediseasepredictor",
           element : <RiceDiseasePredictor/>
+        },
+        {
+          path : "/About",
+          element : <AboutPage />
         },
       ],
     },
