@@ -882,7 +882,7 @@ function DiseaseDectionSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-green-100 p-4 rounded-lg h-64 flex items-center justify-center">
               <img
-                src="/assets/images/bacterial_leaf_blight (310).jpg"
+                src="/assets/images/Paddy_Brown-spot-min-1024x685-1.png"
                 alt="Collecting data for crop recommendation"
                 className="w-full h-64 object-contain rounded-lg"
               />
