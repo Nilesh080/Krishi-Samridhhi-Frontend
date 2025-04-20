@@ -809,7 +809,7 @@ function DiseaseDectionSection() {
                     20-50% loss
                   </td>
                 </tr>
-                <tr className="bg-green-50">
+                <tr>
                   <td className="px-4 py-2 border border-green-200">
                     Brown Spot
                   </td>
@@ -1388,7 +1388,7 @@ function DiseaseDectionSection() {
                         <td className="px-4 py-2 border border-green-200">0.643</td>
                       </tr>
                       <tr className="bg-green-50">
-                        <td className="px-4 py-2 border border-green-200">YOLOv8n</td>
+                        <td className="px-4 py-2 border border-green-200">YOLOv9s</td>
                         <td className="px-4 py-2 border border-green-200">0.943</td>
                         <td className="px-4 py-2 border border-green-200">0.935</td>
                         <td className="px-4 py-2 border border-green-200">0.964</td>
@@ -1527,7 +1527,7 @@ function DiseaseDectionSection() {
             </div>
           </div>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <h4 className="font-medium text-green-700 mb-4">
               Class-wise Performance
             </h4>
@@ -1588,7 +1588,7 @@ function DiseaseDectionSection() {
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
