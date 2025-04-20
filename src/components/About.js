@@ -1360,51 +1360,7 @@ function DiseaseDectionSection() {
                 </table>
               </div>
               
-              {/* New table: Object Detection Models */}
-              <div className="mt-6">
-                <h5 className="font-medium text-green-700 mb-2">
-                  Object Detection Performance
-                </h5>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-green-200">
-                    <caption className="caption-top text-sm text-green-800 mb-2">
-                      Performance Metrics for Object Detection Models
-                    </caption>
-                    <thead>
-                      <tr className="bg-green-100">
-                        <th className="px-4 py-2 border border-green-200">Model</th>
-                        <th className="px-4 py-2 border border-green-200">Precision</th>
-                        <th className="px-4 py-2 border border-green-200">Recall</th>
-                        <th className="px-4 py-2 border border-green-200">mAP50</th>
-                        <th className="px-4 py-2 border border-green-200">mAP50-95</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="px-4 py-2 border border-green-200">YOLOv8s</td>
-                        <td className="px-4 py-2 border border-green-200">0.937</td>
-                        <td className="px-4 py-2 border border-green-200">0.912</td>
-                        <td className="px-4 py-2 border border-green-200">0.952</td>
-                        <td className="px-4 py-2 border border-green-200">0.643</td>
-                      </tr>
-                      <tr className="bg-green-50">
-                        <td className="px-4 py-2 border border-green-200">YOLOv9s</td>
-                        <td className="px-4 py-2 border border-green-200">0.943</td>
-                        <td className="px-4 py-2 border border-green-200">0.935</td>
-                        <td className="px-4 py-2 border border-green-200">0.964</td>
-                        <td className="px-4 py-2 border border-green-200">0.648</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-2 border border-green-200">Detectron2</td>
-                        <td className="px-4 py-2 border border-green-200">0.4613</td>
-                        <td className="px-4 py-2 border border-green-200">0.532</td>
-                        <td className="px-4 py-2 border border-green-200">0.7334</td>
-                        <td className="px-4 py-2 border border-green-200">0.4613</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              
               
             
             </div>
@@ -1417,7 +1373,7 @@ function DiseaseDectionSection() {
           <h3 className="text-xl font-semibold text-green-700 mb-4">
             4. Model Evaluation
           </h3>
-          <div className="overflow-x-auto mb-6">
+          {/* <div className="overflow-x-auto mb-6">
             <table className="min-w-full bg-white border border-green-200">
               <caption className="caption-top text-sm text-green-800 mb-2">
                 Evaluation Metrics for All Models
@@ -1501,7 +1457,7 @@ function DiseaseDectionSection() {
                 <Bar dataKey="f1Score" name="F1-Score" fill="#22c55e" />
               </BarChart>
             </ResponsiveContainer>
-          </div>
+          </div> */}
           <h4 className="font-medium text-green-700 mb-4">Confusion Matrix</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-green-100 p-4 rounded-lg h-64 flex items-center justify-center">
@@ -1526,7 +1482,51 @@ function DiseaseDectionSection() {
               />
             </div>
           </div>
-
+            {/* New table: Object Detection Models */}
+            <div className="mt-6">
+                <h5 className="font-medium text-green-700 mb-2">
+                  Object Detection Performance
+                </h5>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full bg-white border border-green-200">
+                    <caption className="caption-top text-sm text-green-800 mb-2">
+                      Performance Metrics for Object Detection Models
+                    </caption>
+                    <thead>
+                      <tr className="bg-green-100">
+                        <th className="px-4 py-2 border border-green-200">Model</th>
+                        <th className="px-4 py-2 border border-green-200">Precision</th>
+                        <th className="px-4 py-2 border border-green-200">Recall</th>
+                        <th className="px-4 py-2 border border-green-200">mAP50</th>
+                        <th className="px-4 py-2 border border-green-200">mAP50-95</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">YOLOv8s</td>
+                        <td className="px-4 py-2 border border-green-200">0.937</td>
+                        <td className="px-4 py-2 border border-green-200">0.912</td>
+                        <td className="px-4 py-2 border border-green-200">0.952</td>
+                        <td className="px-4 py-2 border border-green-200">0.643</td>
+                      </tr>
+                      <tr className="bg-green-50">
+                        <td className="px-4 py-2 border border-green-200">YOLOv9s</td>
+                        <td className="px-4 py-2 border border-green-200">0.943</td>
+                        <td className="px-4 py-2 border border-green-200">0.935</td>
+                        <td className="px-4 py-2 border border-green-200">0.964</td>
+                        <td className="px-4 py-2 border border-green-200">0.648</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">Detectron2</td>
+                        <td className="px-4 py-2 border border-green-200">0.4613</td>
+                        <td className="px-4 py-2 border border-green-200">0.532</td>
+                        <td className="px-4 py-2 border border-green-200">0.7334</td>
+                        <td className="px-4 py-2 border border-green-200">0.4613</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
           {/* <div className="mt-8">
             <h4 className="font-medium text-green-700 mb-4">
               Class-wise Performance
