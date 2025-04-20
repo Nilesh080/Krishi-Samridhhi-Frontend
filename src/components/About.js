@@ -928,7 +928,7 @@ function DiseaseDectionSection() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-xl font-semibold text-green-700 mb-4">
             3. Model Architecture
@@ -1123,6 +1123,290 @@ function DiseaseDectionSection() {
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h3 className="text-xl font-semibold text-green-700 mb-4">
+            3. Model Architecture
+          </h3>
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="lg:w-1/2">
+              <h4 className="font-medium text-green-700 mb-2">
+                CNN Architecture
+              </h4>
+              <div className="bg-green-100 p-4 rounded-lg h-64 flex items-center justify-center">
+                <img
+                  src="/assets/images/CNN_Accuracy.jpg"
+                  alt="Collecting data for crop recommendation"
+                  className="w-full h-64 object-contain rounded-lg"
+                />
+              </div>
+              <div className="mt-4">
+                <h5 className="font-medium text-green-700 mb-2">
+                  Model Parameters
+                </h5>
+                <table className="min-w-full bg-white border border-green-200">
+                  <caption className="caption-top text-sm text-green-800 mb-2">
+                    CNN Model Parameters
+                  </caption>
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="px-4 py-2 border border-green-200">
+                        Layer
+                      </th>
+                      <th className="px-4 py-2 border border-green-200">
+                        Parameters
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm">
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Conv2D (1)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        16 filters, 3×3 kernel
+                      </td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        MaxPooling2D (1)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        2×2 pool size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Conv2D (2)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        32 filters, 3×3 kernel
+                      </td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        MaxPooling2D (2)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        2×2 pool size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Conv2D (3)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        64 filters, 3×3 kernel
+                      </td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        MaxPooling2D (3)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        2×2 pool size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Flatten
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">-</td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        Dense (1)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        128 units, ReLU
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Dense (2)
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        4 units, Softmax
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {/* New table: Rice Crop Disease Classification */}
+              <div className="mt-6">
+                <h5 className="font-medium text-green-700 mb-2">
+                  CNN Classification Performance
+                </h5>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full bg-white border border-green-200">
+                    <caption className="caption-top text-sm text-green-800 mb-2">
+                      Rice Crop Disease Classification using CNN
+                    </caption>
+                    <thead>
+                      <tr className="bg-green-100">
+                        <th className="px-4 py-2 border border-green-200">Metric</th>
+                        <th className="px-4 py-2 border border-green-200">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">Final Training Accuracy</td>
+                        <td className="px-4 py-2 border border-green-200">0.9210</td>
+                      </tr>
+                      <tr className="bg-green-50">
+                        <td className="px-4 py-2 border border-green-200">Final Validation Accuracy</td>
+                        <td className="px-4 py-2 border border-green-200">0.9129</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">Final Training Loss</td>
+                        <td className="px-4 py-2 border border-green-200">0.2626</td>
+                      </tr>
+                      <tr className="bg-green-50">
+                        <td className="px-4 py-2 border border-green-200">Final Validation Loss</td>
+                        <td className="px-4 py-2 border border-green-200">0.3364</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <h4 className="font-medium text-green-700 mb-2">
+                Training Process
+              </h4>
+              <div className="bg-green-100 p-4 rounded-lg h-64 flex items-center justify-center">
+                <img
+                  src="/assets/images/CNN_sumary.jpg"
+                  alt="Collecting data for crop recommendation"
+                  className="w-full h-64 object-contain rounded-lg"
+                />
+              </div>
+              <div className="mt-4">
+                <h5 className="font-medium text-green-700 mb-2">
+                  Training Configuration
+                </h5>
+                <table className="min-w-full bg-white border border-green-200">
+                  <caption className="caption-top text-sm text-green-800 mb-2">
+                    Training Configuration
+                  </caption>
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="px-4 py-2 border border-green-200">
+                        Parameter
+                      </th>
+                      <th className="px-4 py-2 border border-green-200">
+                        Value
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Optimizer
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        Adam
+                      </td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        Learning Rate
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        0.001
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Batch Size
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">32</td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        Epochs
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">50</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Data Split
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        80% train, 10% validation, 10% test
+                      </td>
+                    </tr>
+                    <tr className="bg-green-50">
+                      <td className="px-4 py-2 border border-green-200">
+                        Augmentation
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        Rotation, zoom, flip, shift
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2 border border-green-200">
+                        Early Stopping
+                      </td>
+                      <td className="px-4 py-2 border border-green-200">
+                        Patience = 10
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              {/* New table: Object Detection Models */}
+              <div className="mt-6">
+                <h5 className="font-medium text-green-700 mb-2">
+                  Object Detection Performance
+                </h5>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full bg-white border border-green-200">
+                    <caption className="caption-top text-sm text-green-800 mb-2">
+                      Performance Metrics for Object Detection Models
+                    </caption>
+                    <thead>
+                      <tr className="bg-green-100">
+                        <th className="px-4 py-2 border border-green-200">Model</th>
+                        <th className="px-4 py-2 border border-green-200">Precision</th>
+                        <th className="px-4 py-2 border border-green-200">Recall</th>
+                        <th className="px-4 py-2 border border-green-200">mAP50</th>
+                        <th className="px-4 py-2 border border-green-200">mAP50-95</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">YOLOv8s</td>
+                        <td className="px-4 py-2 border border-green-200">0.937</td>
+                        <td className="px-4 py-2 border border-green-200">0.912</td>
+                        <td className="px-4 py-2 border border-green-200">0.952</td>
+                        <td className="px-4 py-2 border border-green-200">0.643</td>
+                      </tr>
+                      <tr className="bg-green-50">
+                        <td className="px-4 py-2 border border-green-200">YOLOv8n</td>
+                        <td className="px-4 py-2 border border-green-200">0.943</td>
+                        <td className="px-4 py-2 border border-green-200">0.935</td>
+                        <td className="px-4 py-2 border border-green-200">0.964</td>
+                        <td className="px-4 py-2 border border-green-200">0.648</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-2 border border-green-200">Detectron2</td>
+                        <td className="px-4 py-2 border border-green-200">0.4613</td>
+                        <td className="px-4 py-2 border border-green-200">0.532</td>
+                        <td className="px-4 py-2 border border-green-200">0.7334</td>
+                        <td className="px-4 py-2 border border-green-200">0.4613</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            
             </div>
           </div>
         </div>
