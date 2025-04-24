@@ -64,26 +64,28 @@ const Analysis = () => {
   // Fetch data from Firebase
   useEffect(() => {
     const dataRef = ref(database, "Data");
-    const sensorRef = ref(database, "NPK_Sensor_Data");
+    // const sensorRef = ref(database, "NPK_Sensor_Data");
 
     onValue(dataRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
+
         setSensorData({
           temperature: parseFloat(data.temperature) || 0,
           humidity: parseFloat(data.humidity) || 0,
-          soilMoisture: parseInt(data.moisture1) || 0,
+          soilMoisture: parseFloat(data.moisture1) || 0,
         });
+        // console.log(setSensorData.humidity);
       }
     });
-
-    onValue(sensorRef, (snapshot) => {
+    
+    onValue(dataRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
         setNutrientData({
-          nitrogen: data.Nitrogen || 0,
-          phosphorous: data.Phosphorous || 0,
-          potassium: data.Potassium || 0,
+          nitrogen: data.nitrogen || 0,
+          phosphorous: data.phosphorous || 0,
+          potassium: data.potassium || 0,
         });
       }
     });
