@@ -31,7 +31,7 @@ const SoilMoisture = () => {
         const snapshot = await get(dataRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          setSoilMoisture(data.Data?.moisture1 || 0);
+          setSoilMoisture(100-data.Data?.moisture1 || 0);
           setTemperature(data.Data?.temperature || '');
           setHumidity(data.Data?.humidity || '');
         } else {
