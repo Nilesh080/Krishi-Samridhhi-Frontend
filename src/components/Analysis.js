@@ -69,13 +69,13 @@ const Analysis = () => {
     onValue(dataRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
-
+        
         setSensorData({
           temperature: parseFloat(data.temperature) || 0,
           humidity: parseFloat(data.humidity) || 0,
-          soilMoisture: parseFloat(data.moisture1) || 0,
+          soilMoisture: (100 - parseFloat(data.moisture1)) || 0,
         });
-        // console.log(setSensorData.humidity);
+        
       }
     });
     
