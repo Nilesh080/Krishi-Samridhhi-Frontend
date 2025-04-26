@@ -1,1 +1,1 @@
-#This is the frontend of Plant-Disease-App
+Platform for farmers to boost the crop productivity.
